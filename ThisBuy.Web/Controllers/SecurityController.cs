@@ -28,6 +28,10 @@ namespace ThisBuy.Web.Controllers
                 if(user.IsActive == true)
                 {
                     Session["userId"] = user.Id.ToString();
+                    if(user.RoleId == 1)
+                    {
+                        Session["admin"] = "admin";
+                    }
                     return RedirectToAction("Index", "home");
                 }
                 else
@@ -47,6 +51,7 @@ namespace ThisBuy.Web.Controllers
         public ActionResult Logout()
         {
             Session.Remove("userId");
+            Session.Remove("admin");
             return RedirectToAction("Login","Security");
         }
 

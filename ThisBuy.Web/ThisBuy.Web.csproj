@@ -143,6 +143,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminCategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminCommentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminContactsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminPaysController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminPhotosController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminProductsController.cs" />
@@ -506,11 +507,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Areas\Admin\Views\AdminProducts\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminProducts\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminProducts\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminProducts\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminProducts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\AdminCategories\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AdminCategories\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AdminCategories\Details.cshtml" />
@@ -536,6 +533,11 @@
     <Content Include="Areas\Admin\Views\AdminPhotos\Details.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPhotos\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPhotos\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProducts\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProducts\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProducts\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProducts\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProducts\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminRoles\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AdminRoles\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AdminRoles\Details.cshtml" />
@@ -551,6 +553,7 @@
     <Content Include="Areas\Admin\Views\AdminUsers\Details.cshtml" />
     <Content Include="Areas\Admin\Views\AdminUsers\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdminUsers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -672,7 +675,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

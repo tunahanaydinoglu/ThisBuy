@@ -15,16 +15,35 @@ namespace ThisBuy.Web.Controllers
     {
         ThisBuyContext db = new ThisBuyContext();
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            ProductIndexViewModel model = new ProductIndexViewModel
+            if(id == null)
             {
-                Products = db.Products.ToList(),
+                ProductIndexViewModel model = new ProductIndexViewModel
+                {
+                    Products = db.Products.ToList(),
+                    Categories = db.Categories.ToList()
+                };
+                return View(model);
+            }
+            ProductIndexViewModel modell = new ProductIndexViewModel
+            {
+                Products = db.Products.ToList().Where(p=>p.CategoryId == id),
                 Categories = db.Categories.ToList()
             };
 
-            return View(model);
+            return View(modell);
         }
+
+        //public ActionResult ProductListByCategory(int? id)
+        //{
+        //    ProductIndexViewModel model = new ProductIndexViewModel
+        //    {
+        //        Products = db.Products.ToList().Where(p=>p.CategoryId == id),
+        //        Categories = db.Categories.ToList()
+        //    };
+        //    return View(model);
+        //}
 
         public ActionResult ProductDetail(int? id)
         {

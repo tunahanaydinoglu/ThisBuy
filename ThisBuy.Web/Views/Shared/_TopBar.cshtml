@@ -28,10 +28,8 @@
                         </li>
                         @if (Session["userId"] != null)
                         {
-                            <li> <a href="~/Profile/UserProfile/@Session["userId"]"><span class="flaticon-user"> Profilim</span></a></li>
-                            <li>
-                                <span class="flaticon-arrow">@Html.ActionLink("Çıkış Yap", "Logout", "Security" ,new { @class="" ,style="color:#333"})</span>
-</li>
+                                <li> <a href="~/Profile/UserProfile/@Session["userId"]"><span class="flaticon-user"> Profilim</span></a></li>
+                                <li><span class="flaticon-arrow"><a href="~/Security/Logout" style="color:#333">Çıkış Yap</a></span></li>
                         }
                         else
                         {

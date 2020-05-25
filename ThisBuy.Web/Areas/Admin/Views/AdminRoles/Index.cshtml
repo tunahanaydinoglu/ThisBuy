@@ -1,43 +1,34 @@
 ﻿@model IEnumerable<ThisBuy.Dal.Entities.Role>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.RoleId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.RoleId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.RoleId })
-                </td>
-            </tr>
-        }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoleId })
+        </td>
+    </tr>
+}
 
-    </table>
-</body>
-</html>
+</table>

@@ -24,24 +24,28 @@
 <section class="popular-items latest-padding">
     <div class="container">
         <center style="margin-top : -9em;">
+            <a href="~/product/Index" class="genric-btn danger circle">Tüm Kategoriler</a>
             @foreach (var category in Model.Categories)
             {
-                <a href="#" class="genric-btn danger circle">@category.Name</a>
+                <a href="~/product/Index/@category.Id" class="genric-btn danger circle">@category.Name</a>
             }
+            &nbsp;
+            &nbsp;
+            <input id="myInput" type="text" placeholder="Ürün Arama" style="border:2px solid red;border-radius:30px">
+            <i class="fas fa-search" aria-hidden="true"></i>
         </center>
         <div class="row product-btn justify-content-between mb-40">
-
         </div>
         <!-- Nav Card -->
         <div class="tab-content" id="nav-tabContent">
             <!-- card one -->
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row">
+                <div class="row" id="myDIV">
                     @foreach (var product in Model.Products)
                     {
                         if (product.IsActive == true)
                         {
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <nav class="col-xl-4 col-lg-4 col-md-6 col-sm-6" id="myProd">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
                                         <img src="@product.Photo" alt="">
@@ -51,11 +55,11 @@
                                         <div class="favorit-items">
                                         </div>
                                     </div>
-                                    <div class="popular-caption">
+                                    <div class="popular-caption" id="table">
                                         <h3><a href="~/product/productdetail/@product.Id">@product.Name</a></h3>
                                     </div>
                                 </div>
-                            </div>
+                            </nav>
                         }
                     }
 
@@ -66,3 +70,14 @@
     </div>
 </section>
 <!-- Latest Products End -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myDIV nav").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

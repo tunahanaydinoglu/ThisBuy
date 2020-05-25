@@ -1,51 +1,43 @@
 ﻿@model ThisBuy.Dal.Entities.Pay
 
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Details</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
-</head>
-<body>
-    <div>
-        <h4>Pay</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Product.Name)
-            </dt>
+<div>
+    <h4>Pay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Product.Name)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.User.Name)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.User.Name)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Offer)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Offer)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Offer)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Offer)
+        </dd>
 
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

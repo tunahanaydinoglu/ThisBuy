@@ -35,7 +35,7 @@
     <section class="resume-section" id="about">
         <div class="resume-section-content">
             <h1 class="mb-0">@Model.User.Name <br /><span class="text-primary">@Model.User.Surname</span></h1><br />
-            <div class="subheading mb-5">@Model.User.Address <br /> <br /><a href="@Model.User.Email"> @Model.User.Email </a></div>
+            <div class="subheading mb-5"><a href="mailto:@Model.User.Email"> @Model.User.Email </a></div>
             <p class="lead mb-5">@Model.User.About</p>
         </div>
     </section>

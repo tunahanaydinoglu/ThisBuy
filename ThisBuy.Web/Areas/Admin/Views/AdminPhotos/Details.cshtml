@@ -1,43 +1,35 @@
 ﻿@model ThisBuy.Dal.Entities.Photo
 
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Details</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
-</head>
-<body>
-    <div>
-        <h4>Photo</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Product.Name)
-            </dt>
+<div>
+    <h4>Photo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Product.Name)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.PhotoPath)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhotoPath)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.PhotoPath)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.PhotoPath)
+        </dd>
 
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
