@@ -1,0 +1,37 @@
+﻿@using ThisBuy.Web.Models
+@{
+
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@model  RegisterViewModel
+<link href="~/assets/css/register.css" rel="stylesheet" />
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780" style="margin-top:-6rem;">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Kayıt Bilgileri</h2>
+                    @using (Html.BeginForm("Register","Security",FormMethod.Post))
+                    {
+                        @Html.ValidationSummary()
+                <div class="input-group">
+                    @Html.TextBoxFor(x => x.User.Name, new { @class = "input--style-3", Required = "required", placeholder = "Adınızı giriniz..." })
+                </div><div class="input-group">
+                            @Html.TextBoxFor(x => x.User.Surname, new { @class = "input--style-3", Required = "required", placeholder = "Soyadınızı giriniz..." })
+                        </div>
+                        <div class="input-group">
+                            @Html.TextBoxFor(x => x.User.Email, new { @class = "input--style-3", Required = "required", placeholder = "Email giriniz...", type="email"})
+                        </div>
+                        <div class="input-group">
+                            @Html.TextBoxFor(x => x.User.Password, new { @class = "input--style-3", Required = "required", placeholder = "Şifrenizi giriniz...", type = "password" })
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Kayıt Ol</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

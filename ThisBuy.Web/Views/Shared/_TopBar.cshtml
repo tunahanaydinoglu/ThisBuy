@@ -1,0 +1,51 @@
+﻿<!-- Header Start -->
+<div class="header-area">
+    <div class="main-header header-sticky">
+        <div class="container-fluid">
+            <div class="menu-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <h3>This Buy</h3>
+                </div>
+                <!-- Main-menu -->
+                <div class="main-menu d-none d-lg-block">
+                    <nav>
+                        <ul id="navigation">
+                            <li><a href="~/Home/Index">Ana Sayfa</a></li>
+                            <li><a href="~/Product/Index">Mezatlarımız</a></li>
+                            <li><a href="~/Home/Contact">İletişim</a></li>
+                            <li><a href="~/Home/About">Hakkımızda</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Header Right -->
+                <div class="header-right">
+                    <ul>
+                        <li>
+                            <div class="nav-search search-switch">
+
+                            </div>
+                        </li>
+                        @if (Session["userId"] != null)
+                        {
+                            <li> <a href="~/Profile/UserProfile/@Session["userId"]"><span class="flaticon-user"> Profilim</span></a></li>
+                            <li>
+                                <span class="flaticon-arrow">@Html.ActionLink("Çıkış Yap", "Logout", "Security" ,new { @class="" ,style="color:#333"})</span>
+</li>
+                        }
+                        else
+                        {
+                            <li> <a href="~/Security/Login"><span class="flaticon-user"> Giriş Yap</span></a></li>
+                        }
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->

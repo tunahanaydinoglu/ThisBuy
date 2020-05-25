@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@model ThisBuy.Web.Models.ProductIndexViewModel
+
+
+<div class="slider-area ">
+    <div class="single-slider slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>ThisBuy Mezatlar</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End-->
+<!-- Latest Products Start -->
+<section class="popular-items latest-padding">
+    <div class="container">
+        <center style="margin-top : -9em;">
+            @foreach (var category in Model.Categories)
+            {
+                <a href="#" class="genric-btn danger circle">@category.Name</a>
+            }
+        </center>
+        <div class="row product-btn justify-content-between mb-40">
+
+        </div>
+        <!-- Nav Card -->
+        <div class="tab-content" id="nav-tabContent">
+            <!-- card one -->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+                    @foreach (var product in Model.Products)
+                    {
+                        if (product.IsActive == true)
+                        {
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="@product.Photo" alt="">
+                                        <div class="img-cap">
+                                            <a href="~/product/productdetail/@product.Id"><span>Mezatı Gör</span></a>
+                                        </div>
+                                        <div class="favorit-items">
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="~/product/productdetail/@product.Id">@product.Name</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                </div>
+                <!-- End Nav Card -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest Products End -->

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@model ThisBuy.Web.Models.LoginViewModel
+<style>
+    #asd{
+        margin-top:-10rem;
+    }
+</style>
+
+<section class="login_part section_padding " id="asd">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>Sitemizde Yeni misiniz?</h2>
+                        <p>
+                            Mezatlarımızda sizde yer almak, tekliflere katılmak, yorumlarda görüşlerizini bildirmek isterseniz aramıza katılabilirsiniz ...
+                        </p>
+                        <a href="~/Security/Register" class="btn_3">Yeni Hesap Oluştur</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>
+                            Hos Geldiniz ! <br>
+                            Lütfen Giris yapınız
+                        </h3>
+                        @ViewBag.Mesaj
+                        @using (Html.BeginForm("Login","Security",FormMethod.Post, new { @class= "row contact_form" }))
+                        {
+                            <div class="col-md-12 form-group p_star">
+                                @Html.TextBoxFor(x => x.User.Email, new { @class = "form-control", Required = "required", placeholder = "Email giriniz...", type = "email" })
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                @Html.TextBoxFor(x => x.User.Password, new { @class = "form-control", Required = "required", placeholder = "Şifrenizi giriniz...", type = "password" })
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account d-flex align-items-center">
+                                </div>
+                                <button type="submit" value="submit" class="btn_3">
+                                    Giriş Yap
+                                </button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
