@@ -11,6 +11,17 @@ namespace ThisBuy.Web.Areas.Admin.Controllers
         // GET: Admin/AdminHome
         public ActionResult Index()
         {
+            if(Session["admin"] == "admin")
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Yetki","AdminHome");
+            }
+        }
+        public ActionResult Yetki()
+        {
             return View();
         }
     }

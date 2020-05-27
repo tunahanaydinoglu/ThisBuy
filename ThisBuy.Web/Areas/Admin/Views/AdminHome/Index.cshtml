@@ -3,14 +3,5 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-@if(Session["admin"] != null){
+
 <center><h1>Admin panelini kullanabilirsiniz</h1></center>
-}
-else
-{
-<center id="cnt">
-    <center><h1>Yetkiniz olamayan bir alana erişmeye çalışıyorsunuz lütfen yetkili bir hesaba giriş yapınız...</h1></center>
-    <br />
-    <a href="~/Security/Login"><button class="btn btn-warning">Giriş Yap</button></a>
-</center>
-}
