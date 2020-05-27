@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if(Session["admin"] != null){
+<h2>Admin panelini kullanabilirsiniz</h2>
+}
+else
+{
+<center id="cnt">
+    <h2>Yetkiniz olamayan bir alana erişmeye çalışıyorsunuz lütfen yetkili bir hesaba giriş yapınız...</h2>
+    <br />
+    <a href="~/Security/Login"><button class="btn btn-warning">Giriş Yap</button></a>
+</center>
+}

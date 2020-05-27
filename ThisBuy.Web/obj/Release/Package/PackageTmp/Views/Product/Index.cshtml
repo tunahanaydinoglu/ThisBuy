@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@model ThisBuy.Web.Models.ProductIndexViewModel
+
+
+<div class="slider-area ">
+    <div class="single-slider slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>ThisBuy Mezatlar</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End-->
+<!-- Latest Products Start -->
+<section class="popular-items latest-padding">
+    <div class="container">
+        <center style="margin-top : -9em;">
+            <a href="~/product/Index" class="genric-btn danger circle">Tüm Kategoriler</a>
+            @foreach (var category in Model.Categories)
+            {
+                <a href="~/product/Index/@category.Id" class="genric-btn danger circle">@category.Name</a>
+            }
+            &nbsp;
+            &nbsp;
+            <input id="myInput" type="text" placeholder="Ürün Arama" style="border:2px solid red;border-radius:30px">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </center>
+        <div class="row product-btn justify-content-between mb-40">
+        </div>
+        <!-- Nav Card -->
+        <div class="tab-content" id="nav-tabContent">
+            <!-- card one -->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row" id="myDIV">
+                    @foreach (var product in Model.Products)
+                    {
+                        if (product.IsActive == true)
+                        {
+                            <nav class="col-xl-4 col-lg-4 col-md-6 col-sm-6" id="myProd">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="@product.Photo" alt="">
+                                        <div class="img-cap">
+                                            <a href="~/product/productdetail/@product.Id"><span>Mezatı Gör</span></a>
+                                        </div>
+                                        <div class="favorit-items">
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption" id="table">
+                                        <h3><a href="~/product/productdetail/@product.Id">@product.Name</a></h3>
+                                    </div>
+                                </div>
+                            </nav>
+                        }
+                    }
+
+                </div>
+                <!-- End Nav Card -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest Products End -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myDIV nav").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

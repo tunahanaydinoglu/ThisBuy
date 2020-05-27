@@ -1,0 +1,12 @@
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\ThisBuy.Dal.dll.config
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\ThisBuy.Dal.dll
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\ThisBuy.Dal.pdb
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\EntityFramework.dll
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\EntityFramework.xml
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\obj\Release\ThisBuy.Dal.csprojAssemblyReference.cache
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\obj\Release\ThisBuy.Dal.csproj.CoreCompileInputs.cache
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\obj\Release\ThisBuy.Dal.csproj.CopyComplete
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\obj\Release\ThisBuy.Dal.dll
+C:\Users\Tuna\Documents\Projects\VS\ThisBuy\ThisBuy.Dal\obj\Release\ThisBuy.Dal.pdb

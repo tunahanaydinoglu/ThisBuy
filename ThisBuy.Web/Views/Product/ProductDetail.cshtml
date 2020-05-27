@@ -107,8 +107,11 @@
                             {
                                 <li class="media" id="md">
                                     <a href="~/profile/otheruser/@i.User.Id" class="pull-left">
-                                        <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
-                                    </a>
+                                        @if (i.User.Photo != null)
+                                        {<img src="@i.User.Photo" alt="" class="img-circle" /> }
+                                        else
+                                        { <img src="https://bootdey.com/img/Content/user_1.jpg" alt = "" class="img-circle"/>}
+                                        </a>
                                     <div class="media-body" id="ms">
                                         <span class="text-muted pull-right">
                                         </span>
@@ -121,7 +124,7 @@
                                 </li>
                             }
                         </ul>
-                        @if (Session["userId"] != null)
+                        @if(Session["userId"] != null)
                         {
                             using (Html.BeginForm("AddComment", "Product", FormMethod.Post))
                             {
@@ -155,7 +158,10 @@
                             {
                                 <li class="media" id="md">
                                     <a href="~/profile/otheruser/@i.User.Id" class="pull-left">
-                                        <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                        @if (i.User.Photo != null)
+                                        {<img src="@i.User.Photo" alt="" class="img-circle" /> }
+                                        else
+                                        { <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle" />}
                                     </a>
                                     <div class="media-body" id="ms">
                                         <span class="text-muted pull-right">

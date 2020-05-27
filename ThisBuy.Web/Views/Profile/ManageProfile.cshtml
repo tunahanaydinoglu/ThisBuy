@@ -5,13 +5,7 @@
 }
 @model ThisBuy.Web.Models.UserProfileViewModel
 
-
-@if (Session["userId"] != Model.User.Id.ToString())
-{
-    <h3>Lütfen giriş yapınız</h3>
-}
-else
-{<div class="container">
+    <div class="container">
         <h1>Profil Düzenle</h1>
         <hr>
         <br />
@@ -91,4 +85,3 @@ else
         <br />
     </div>
     <hr>
-}
