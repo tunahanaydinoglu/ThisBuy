@@ -29,7 +29,7 @@ namespace ThisBuy.Web.Controllers
             {
                 User = db.Users.Find(id),
             };
-            if(Session["userId"] == null)
+            if (Session["userId"] == null)
             {
                 return RedirectToAction("Yetki", "Admin/AdminHome");
             }
@@ -44,7 +44,9 @@ namespace ThisBuy.Web.Controllers
                 if (users == null)
                 {
                     return HttpNotFound();
-                }else if(ses != id){
+                }
+                else if (ses != id)
+                {
                     users.User = db.Users.Find(ses);
                     return View(users);
                 }
@@ -65,15 +67,15 @@ namespace ThisBuy.Web.Controllers
                 return View(model);
             }
             User user = db.Users.Find(model.User.Id);
-                user.Name = model.User.Name;
-                user.Surname = model.User.Surname;
-                user.Password = model.User.Password;
-                user.Twitter = model.User.Twitter;
-                user.Photo = model.User.Photo;
-                user.Address = model.User.Address;
-                user.Email = model.User.Email;
-                user.About = model.User.About;
-                user.Instagram = model.User.Instagram;
+            user.Name = model.User.Name;
+            user.Surname = model.User.Surname;
+            user.Password = model.User.Password;
+            user.Twitter = model.User.Twitter;
+            user.Photo = model.User.Photo;
+            user.Address = model.User.Address;
+            user.Email = model.User.Email;
+            user.About = model.User.About;
+            user.Instagram = model.User.Instagram;
             db.Users.AddOrUpdate(user);
             db.SaveChanges();
             RouteValueDictionary RouteInfo = new RouteValueDictionary();
@@ -87,20 +89,31 @@ namespace ThisBuy.Web.Controllers
             {
                 User = db.Users.Find(id),
             };
-            if (id == null)
+            if (id != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            else
-            {
-                if (users == null)
+                if (users != null)
                 {
-                    return HttpNotFound();
+
+                    if (users.User.Photo != null)
+                    {
+                        return View(users);
+                    }
+                    else
+                    {
+                        users.User.Photo = "https://bootdey.com/img/Content/user_1.jpg";
+                        return View(users);
+                    }
                 }
                 else
                 {
-                    return View(users);
+                    return HttpNotFound();
+
                 }
+
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
         }
         public ActionResult OtherUser(int? id)
@@ -109,20 +122,28 @@ namespace ThisBuy.Web.Controllers
             {
                 User = db.Users.Find(id),
             };
-            if (id == null)
+            if (id != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            else
-            {
-                if (users == null)
+                if (users != null)
                 {
-                    return HttpNotFound();
+                    if (users.User.Photo != null)
+                    {
+                        return View(users);
+                    }
+                    else
+                    {
+                        users.User.Photo = "https://bootdey.com/img/Content/user_1.jpg";
+                        return View(users);
+                    }
                 }
                 else
                 {
-                    return View(users);
+                    return HttpNotFound();
                 }
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
         }
     }
