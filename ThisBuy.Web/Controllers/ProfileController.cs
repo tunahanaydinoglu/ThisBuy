@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
@@ -28,18 +29,28 @@ namespace ThisBuy.Web.Controllers
             {
                 User = db.Users.Find(id),
             };
-            if (id == null)
+            if(Session["userId"] == null)
+            {
+                return RedirectToAction("Yetki", "Admin/AdminHome");
+            }
+            else if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             else
             {
+                var sess = Session["userId"];
+                var ses = Int32.Parse(sess.ToString());
                 if (users == null)
                 {
                     return HttpNotFound();
+                }else if(ses != id){
+                    users.User = db.Users.Find(ses);
+                    return View(users);
                 }
                 else
                 {
+
                     return View(users);
                 }
             }
