@@ -34,6 +34,7 @@ namespace ThisBuy.Web.Controllers
             {
                 return View(model);
             }
+            model.Contact.IsActive = true;
             db.Contacts.Add(model.Contact);
             db.SaveChanges();
             ViewBag.Ekk = "Geri dönüşleriniz için teşekkürler. Mesajınız yetkililere iletilmiştir...";

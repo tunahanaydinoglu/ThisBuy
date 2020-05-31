@@ -20,7 +20,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:46:56</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminCategories/Index.cshtml">
-      <publishTime>05/25/2020 18:29:32</publishTime>
+      <publishTime>05/27/2020 17:22:12</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminComments/Create.cshtml">
       <publishTime>05/25/2020 17:47:12</publishTime>
@@ -35,7 +35,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:47:14</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminComments/Index.cshtml">
-      <publishTime>05/25/2020 17:47:15</publishTime>
+      <publishTime>05/27/2020 17:21:51</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminContacts/Create.cshtml">
       <publishTime>05/25/2020 17:48:00</publishTime>
@@ -50,10 +50,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:48:01</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminContacts/Index.cshtml">
-      <publishTime>05/25/2020 17:48:02</publishTime>
+      <publishTime>05/27/2020 17:22:40</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminHome/Index.cshtml">
-      <publishTime>05/25/2020 18:38:48</publishTime>
+      <publishTime>05/27/2020 18:41:37</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/AdminHome/Yetki.cshtml">
+      <publishTime>05/27/2020 18:43:30</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminPays/Create.cshtml">
       <publishTime>05/25/2020 17:48:19</publishTime>
@@ -68,7 +71,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:48:21</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminPays/Index.cshtml">
-      <publishTime>05/25/2020 17:48:21</publishTime>
+      <publishTime>05/27/2020 17:23:59</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminPhotos/Create.cshtml">
       <publishTime>05/25/2020 17:48:44</publishTime>
@@ -83,7 +86,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:48:46</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminPhotos/Index.cshtml">
-      <publishTime>05/25/2020 17:48:47</publishTime>
+      <publishTime>05/27/2020 17:24:21</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminProducts/Create.cshtml">
       <publishTime>05/25/2020 17:49:05</publishTime>
@@ -98,7 +101,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:49:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminProducts/Index.cshtml">
-      <publishTime>05/25/2020 17:49:08</publishTime>
+      <publishTime>05/27/2020 17:24:34</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminRoles/Create.cshtml">
       <publishTime>05/25/2020 17:49:29</publishTime>
@@ -113,7 +116,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:49:31</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminRoles/Index.cshtml">
-      <publishTime>05/25/2020 17:49:32</publishTime>
+      <publishTime>05/27/2020 17:24:46</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminSales/Create.cshtml">
       <publishTime>05/25/2020 17:49:49</publishTime>
@@ -128,7 +131,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:49:52</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminSales/Index.cshtml">
-      <publishTime>05/25/2020 17:49:52</publishTime>
+      <publishTime>05/27/2020 17:25:16</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminUsers/Create.cshtml">
       <publishTime>05/25/2020 17:50:10</publishTime>
@@ -143,10 +146,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 17:50:12</publishTime>
     </File>
     <File Include="Areas/Admin/Views/AdminUsers/Index.cshtml">
-      <publishTime>05/25/2020 17:50:13</publishTime>
+      <publishTime>05/28/2020 18:36:54</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_AdminLayout.cshtml">
-      <publishTime>05/25/2020 18:24:01</publishTime>
+      <publishTime>05/28/2020 18:37:15</publishTime>
     </File>
     <File Include="Areas/Admin/Views/web.config">
       <publishTime>05/23/2020 01:21:01</publishTime>
@@ -1280,10 +1283,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/26/2020 22:45:12</publishTime>
     </File>
     <File Include="bin/ThisBuy.Web.dll">
-      <publishTime>05/26/2020 22:45:17</publishTime>
+      <publishTime>05/29/2020 06:51:34</publishTime>
     </File>
     <File Include="bin/ThisBuy.Web.pdb">
-      <publishTime>05/26/2020 22:45:17</publishTime>
+      <publishTime>05/29/2020 06:51:34</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 12:57:34</publishTime>
@@ -1670,16 +1673,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 00:01:49</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/24/2020 02:31:54</publishTime>
+      <publishTime>05/28/2020 19:28:30</publishTime>
     </File>
     <File Include="Views/Product/Index.cshtml">
-      <publishTime>05/25/2020 16:42:25</publishTime>
+      <publishTime>05/29/2020 00:33:27</publishTime>
     </File>
     <File Include="Views/Product/ProductDetail.cshtml">
-      <publishTime>05/25/2020 00:05:05</publishTime>
+      <publishTime>05/28/2020 18:47:04</publishTime>
     </File>
     <File Include="Views/Profile/ManageProfile.cshtml">
-      <publishTime>05/25/2020 18:18:50</publishTime>
+      <publishTime>05/27/2020 10:40:46</publishTime>
     </File>
     <File Include="Views/Profile/OtherUser.cshtml">
       <publishTime>05/25/2020 16:50:23</publishTime>
@@ -1688,7 +1691,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2020 18:21:02</publishTime>
     </File>
     <File Include="Views/Security/Login.cshtml">
-      <publishTime>05/24/2020 21:04:02</publishTime>
+      <publishTime>05/27/2020 18:39:55</publishTime>
     </File>
     <File Include="Views/Security/Register.cshtml">
       <publishTime>05/24/2020 02:11:33</publishTime>
@@ -1709,7 +1712,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/23/2020 00:58:21</publishTime>
     </File>
     <File Include="Views/Shared/_TopBar.cshtml">
-      <publishTime>05/25/2020 18:04:04</publishTime>
+      <publishTime>05/28/2020 18:18:37</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/24/2020 02:26:19</publishTime>
