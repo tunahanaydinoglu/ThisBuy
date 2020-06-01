@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/Areas/Admin/Assets/product.css" rel="stylesheet" />
+<nav>
+    <center><button type="button" id="call-products" class="btn btn-success"> Ürünleri Getir </button></center>
+</nav>
+
+<div class="container">
+
+    <table class="table table-dark">
+        <thead>
+        <th>ID</th>
+        <th>Konu</th>
+        <th>İsim</th>
+        <th>Message</th>
+        <th>Email</th>
+        <th>Durum</th>
+        <th>- - - - -</th>
+        </thead>
+        <tbody id="prod">
+            @*<tr>
+                <td>12</td>
+                <td>Tablo</td>
+                <td>Picasso</td>
+                <td><p>Lorem  hjashjsda hjs adhjs djh aas dhjsda jhsda hjasd hj sdhjasd a shjahjasd hjsd ahjsd ahjasdasdhj</p></td>
+                <td><img src="http://www.diken.com.tr/wp-content/uploads/2019/12/Weeping-woman.jpg" /></td>
+                <td>12.2</td>
+                <td>Ekli</td>
+                <td>12-12-2020-02.00</td>
+                <td>Aktif</td>
+                <td><button class="btn btn-primary" id="">Düzenle</button><button class="btn btn-danger" id="delete-product">Sil</button></td>
+            </tr>*@
+        </tbody>
+    </table>
+</div>
+<script src="~/Areas/Admin/Assets/product.js"></script>

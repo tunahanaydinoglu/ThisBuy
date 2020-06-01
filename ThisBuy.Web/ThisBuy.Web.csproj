@@ -150,6 +150,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminRolesController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminSalesController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -166,6 +167,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Assets\product.css" />
+    <Content Include="Areas\Admin\Assets\product.js" />
     <Content Include="assets\css\all.css" />
     <Content Include="assets\css\animate.min.css" />
     <Content Include="assets\css\aos.css" />
@@ -369,11 +372,6 @@
     <Content Include="Areas\Admin\Views\AdminComments\Details.cshtml" />
     <Content Include="Areas\Admin\Views\AdminComments\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdminComments\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminContacts\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminContacts\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminContacts\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminContacts\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminContacts\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPays\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPays\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPays\Details.cshtml" />
@@ -406,6 +404,12 @@
     <Content Include="Areas\Admin\Views\AdminUsers\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminHome\Yetki.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminContacts\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminContacts\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminContacts\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminContacts\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminContacts\Index.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />

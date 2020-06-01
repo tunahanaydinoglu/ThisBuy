@@ -1,0 +1,12 @@
+﻿#call-products{
+    margin:15px;
+}
+* img{
+    height: 80px;
+    width: 60px;
+}
+
+* p{
+    width:200px;
+    height:80px;
+}

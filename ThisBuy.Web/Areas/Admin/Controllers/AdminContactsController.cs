@@ -47,7 +47,7 @@ namespace ThisBuy.Web.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Message,Name,Email,Subject")] Contact contact)
+        public ActionResult Create([Bind(Include = "Id,Message,Name,Email,Subject,IsActive")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace ThisBuy.Web.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Message,Name,Email,Subject")] Contact contact)
+        public ActionResult Edit([Bind(Include = "Id,Message,Name,Email,Subject,IsActive")] Contact contact)
         {
             if (ModelState.IsValid)
             {
