@@ -2,7 +2,6 @@
 
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-@model ThisBuy.Web.Models.ContactViewModel
 
 <section class="contact-section">
     <div class="container">
@@ -21,22 +20,22 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                @Html.TextBoxFor(m => m.Contact.Name, new { @class = "form-control valid", placeholder = "Adınızı giriniz", required = "required", type = "text" })
+                                <input type="text" class="form-control valid" placeholder="Adınızı giriniz.." required="required" name="Name" id="Name" />
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                @Html.TextBoxFor(m => m.Contact.Email, new { @class = "form-control valid", placeholder = "Email adresinizi giriniz", required = "required", type = "email" })
+                                <input type="email" class="form-control valid" placeholder="Email giriniz.." required="required" name="Email" id="Email" />
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                @Html.TextBoxFor(m => m.Contact.Subject, new { @class = "form-control", placeholder = "Konu belirtiniz", required = "required", type = "text" })
+                                <input type="text" class="form-control valid" placeholder="Konu belirtiniz.." required="required" name="Subject" id="Subject" />
                             </div>
                         </div>
                     </div>
                     <div class="form-group mt-3">
-                        <button type="submit" class="button button-contactForm boxed-btn" onclick=""><strong>Gönder</strong></button>
+                        <button type="submit" class="button button-contactForm boxed-btn" id="Gonder"><strong>Gönder</strong></button>
                     </div>
                 </form>
             </div>
@@ -63,3 +62,4 @@
         </div>
     </div>
 </section>
+<script src="~/assets/postContact.js"></script>

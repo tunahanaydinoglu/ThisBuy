@@ -1,0 +1,36 @@
+﻿@model  ThisBuy.Dal.Entities.Contact
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+    <div class="container">
+        <form class="form-group" method="put">
+            <div>
+                <label>ID</label>
+                <input name="Id" id="Id" readonly="readonly" value="@Model.Id" class="form-control"/>
+            </div>
+            <div>
+                <label>Konu</label>
+                <input name="Subject" id="Subject" value="@Model.Subject" class="form-control"/>
+            </div>
+            <div>
+                <label>İsim</label>
+                <input name="Name" id="Name" value="@Model.Name" class="form-control"/>
+            </div>
+            <div>
+                <label>Mesaj</label>
+                <input name="Message" id="Message" value="@Model.Message" class="form-control"/>
+            </div>
+            <div>
+                <label>Email</label>
+                <input name="Email" id="Email" value="@Model.Email" class="form-control"/>
+            </div>
+            <div>
+                <label>Durum</label>
+                <input type="text" id="IsActive" value="@Model.IsActive" class="form-control"/>
+            </div>
+            <br />
+            <button type="submit" id="editButton" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+<script src="~/Areas/Admin/Assets/contactEdit.js"></script>

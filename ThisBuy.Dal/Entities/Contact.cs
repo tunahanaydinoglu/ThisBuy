@@ -13,6 +13,6 @@ namespace ThisBuy.Dal.Entities
         public string Name { get; set; }
         public string Email { get; set; }
         public string Subject { get; set; }
-        public bool IsActive { get; set; }
+        public string IsActive { get; set; }
     }
 }

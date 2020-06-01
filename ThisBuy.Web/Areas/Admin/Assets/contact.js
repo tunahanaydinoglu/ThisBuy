@@ -46,7 +46,6 @@ class Request {
                 .catch(err => reject(err));
         })
     }
-
 }
 
 const req = new Request();
@@ -54,33 +53,40 @@ const req = new Request();
 eventListeners();
 
 function eventListeners() {
-    callProd.addEventListener("click", denek);
+    callProd.addEventListener("click", getContacts);
 }
 
 
-function denek(){
+function getContacts() {
     req.get("http://localhost:64382/api/contacts")
         .then(data => {
             console.log(data);
-            return showProduct(data);
+            return showContacts(data);
         }).catch(err => console.log(err));
 }
 
-function showProduct(products) {
+function showContacts(contacts) {
     let result = [];
-    products.map((product) => {
+    contacts.map((contact) => {
         result += `
             <tr>
-                <td>${product.Id}</td>
-                <td>${product.Subject}</td>
-                <td>${product.Name}</</td>
-                <td><p>${product.Message}</</p></td>
-                <td>${product.Email}</td>
-                <td>${product.IsActive}</td>
-                <td><button class="btn btn-primary" id="">Düzenle</button><button class="btn btn-danger" id="delete-product">Sil</button></td>
+                <td>${contact.Id}</td>
+                <td>${contact.Subject}</td>
+                <td>${contact.Name}</</td>
+                <td><p>${contact.Message}</</p></td>
+                <td>${contact.Email}</td>
+                <td><input name="IsActive${contact.Id}" value="${contact.IsActive}"/></td>
+                <td><button onclick="window.location='edit/${contact.Id}'" class="btn btn-warning">Düzenle</button> <button onclick="deleteContact(${contact.Id})" class="btn btn-danger">Sil</button></td>
             </tr>
         `;
     })
     tbody.innerHTML = result;
-        
+}
+
+function deleteContact(id) {
+    url = "http://localhost:64382/api/contacts/" + id;
+    console.log(url)
+    req.delete(url)
+        .then(sonuc => console.log(sonuc))
+        .catch(err => console.log(err));
 }

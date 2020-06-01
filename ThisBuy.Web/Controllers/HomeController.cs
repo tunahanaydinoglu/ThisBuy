@@ -30,13 +30,6 @@ namespace ThisBuy.Web.Controllers
         [HttpPost]
         public ActionResult Contact(ContactViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            model.Contact.IsActive = true;
-            db.Contacts.Add(model.Contact);
-            db.SaveChanges();
             ViewBag.Ekk = "Geri dönüşleriniz için teşekkürler. Mesajınız yetkililere iletilmiştir...";
             return View();
         }
